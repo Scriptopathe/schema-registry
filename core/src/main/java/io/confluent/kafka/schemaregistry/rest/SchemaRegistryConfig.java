@@ -618,7 +618,8 @@ public class SchemaRegistryConfig extends RestConfig {
     final String securityProtocolUrlPrefix = securityProtocol + "://";
     final StringBuilder sb = new StringBuilder();
     for (String endpoint : endpoints) {
-      log.info("Checking endpoint: " + endpoint + " (security protocol prefix: " + securityProtocolUrlPrefix + ")");
+      log.info("Checking endpoint: " + endpoint + " (security protocol prefix: "
+                + securityProtocolUrlPrefix + ")");
       if (!endpoint.startsWith(securityProtocolUrlPrefix)) {
         if (endpoint.contains("://")) {
           log.warn(
